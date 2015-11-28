@@ -17,11 +17,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 //        print("viewDidLoad\n")
         // Do any additional setup after loading the view, typically from a nib.
-        metalLayer.frame = self.view.frame
-        metalLayer.device = device
-        metalLayer.pixelFormat = MTLPixelFormat.BGRA8Unorm
-        self.view.layer.addSublayer(metalLayer)
-        redraw()
+//        metalLayer.frame = self.view.frame
+//        metalLayer.device = device
+//        metalLayer.pixelFormat = MTLPixelFormat.BGRA8Unorm
+//        self.view.layer.addSublayer(metalLayer)
+//        redraw()
 //        self.renderer = SSRenderer()
     }
 

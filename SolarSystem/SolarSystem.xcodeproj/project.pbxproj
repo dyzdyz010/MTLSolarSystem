@@ -19,6 +19,7 @@
 		647EDAF21C033EF4002C15EB /* SolarSystemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647EDAF11C033EF4002C15EB /* SolarSystemTests.swift */; };
 		647EDAFD1C033F3A002C15EB /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 647EDAFC1C033F3A002C15EB /* Metal.framework */; };
 		647EDB021C033FDD002C15EB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 647EDB011C033FDD002C15EB /* QuartzCore.framework */; };
+		64D9D6371C09AD6100B5DA40 /* SSMetalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D9D6361C09AD6100B5DA40 /* SSMetalView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		647EDAF31C033EF4002C15EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		647EDAFC1C033F3A002C15EB /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
 		647EDB011C033FDD002C15EB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		64D9D6361C09AD6100B5DA40 /* SSMetalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSMetalView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				643D08401C071CA000DF367F /* Resources */,
 				647EDADC1C033EF4002C15EB /* AppDelegate.swift */,
 				647EDADE1C033EF4002C15EB /* ViewController.swift */,
+				64D9D6361C09AD6100B5DA40 /* SSMetalView.swift */,
 				643D08431C07296500DF367F /* Types.swift */,
 				642D6CDA1C041E4D00C939C6 /* Shaders.metal */,
 				647EDAE01C033EF4002C15EB /* Main.storyboard */,
@@ -239,6 +242,7 @@
 				643D08441C07296500DF367F /* Types.swift in Sources */,
 				647EDADD1C033EF4002C15EB /* AppDelegate.swift in Sources */,
 				642D6CDB1C041E4D00C939C6 /* Shaders.metal in Sources */,
+				64D9D6371C09AD6100B5DA40 /* SSMetalView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
