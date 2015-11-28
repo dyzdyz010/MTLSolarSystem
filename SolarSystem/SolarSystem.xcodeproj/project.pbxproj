@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		642D6CDB1C041E4D00C939C6 /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 642D6CDA1C041E4D00C939C6 /* Shaders.metal */; };
+		643D08421C071CB200DF367F /* sun.obj in Resources */ = {isa = PBXBuildFile; fileRef = 643D08411C071CB200DF367F /* sun.obj */; };
+		643D08441C07296500DF367F /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643D08431C07296500DF367F /* Types.swift */; };
+		643D08461C072A9600DF367F /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 643D08451C072A9600DF367F /* MetalKit.framework */; };
 		647EDADD1C033EF4002C15EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647EDADC1C033EF4002C15EB /* AppDelegate.swift */; };
 		647EDADF1C033EF4002C15EB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647EDADE1C033EF4002C15EB /* ViewController.swift */; };
 		647EDAE21C033EF4002C15EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 647EDAE01C033EF4002C15EB /* Main.storyboard */; };
@@ -15,9 +18,7 @@
 		647EDAE71C033EF4002C15EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 647EDAE51C033EF4002C15EB /* LaunchScreen.storyboard */; };
 		647EDAF21C033EF4002C15EB /* SolarSystemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647EDAF11C033EF4002C15EB /* SolarSystemTests.swift */; };
 		647EDAFD1C033F3A002C15EB /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 647EDAFC1C033F3A002C15EB /* Metal.framework */; };
-		647EDB001C033FD1002C15EB /* SSMetalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647EDAFF1C033FD1002C15EB /* SSMetalView.swift */; };
 		647EDB021C033FDD002C15EB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 647EDB011C033FDD002C15EB /* QuartzCore.framework */; };
-		647EDB041C0353F6002C15EB /* SSRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647EDB031C0353F6002C15EB /* SSRenderer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +33,9 @@
 
 /* Begin PBXFileReference section */
 		642D6CDA1C041E4D00C939C6 /* Shaders.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
+		643D08411C071CB200DF367F /* sun.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sun.obj; sourceTree = "<group>"; };
+		643D08431C07296500DF367F /* Types.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Types.swift; sourceTree = "<group>"; };
+		643D08451C072A9600DF367F /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
 		647EDAD91C033EF4002C15EB /* SolarSystem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SolarSystem.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		647EDADC1C033EF4002C15EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		647EDADE1C033EF4002C15EB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -43,9 +47,7 @@
 		647EDAF11C033EF4002C15EB /* SolarSystemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolarSystemTests.swift; sourceTree = "<group>"; };
 		647EDAF31C033EF4002C15EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		647EDAFC1C033F3A002C15EB /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
-		647EDAFF1C033FD1002C15EB /* SSMetalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSMetalView.swift; sourceTree = "<group>"; };
 		647EDB011C033FDD002C15EB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		647EDB031C0353F6002C15EB /* SSRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSRenderer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				643D08461C072A9600DF367F /* MetalKit.framework in Frameworks */,
 				647EDB021C033FDD002C15EB /* QuartzCore.framework in Frameworks */,
 				647EDAFD1C033F3A002C15EB /* Metal.framework in Frameworks */,
 			);
@@ -68,6 +71,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		643D08401C071CA000DF367F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				643D08411C071CB200DF367F /* sun.obj */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		647EDAD01C033EF4002C15EB = {
 			isa = PBXGroup;
 			children = (
@@ -90,10 +101,10 @@
 		647EDADB1C033EF4002C15EB /* SolarSystem */ = {
 			isa = PBXGroup;
 			children = (
+				643D08401C071CA000DF367F /* Resources */,
 				647EDADC1C033EF4002C15EB /* AppDelegate.swift */,
 				647EDADE1C033EF4002C15EB /* ViewController.swift */,
-				647EDAFF1C033FD1002C15EB /* SSMetalView.swift */,
-				647EDB031C0353F6002C15EB /* SSRenderer.swift */,
+				643D08431C07296500DF367F /* Types.swift */,
 				642D6CDA1C041E4D00C939C6 /* Shaders.metal */,
 				647EDAE01C033EF4002C15EB /* Main.storyboard */,
 				647EDAE31C033EF4002C15EB /* Assets.xcassets */,
@@ -115,6 +126,7 @@
 		647EDAFE1C033F3F002C15EB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				643D08451C072A9600DF367F /* MetalKit.framework */,
 				647EDB011C033FDD002C15EB /* QuartzCore.framework */,
 				647EDAFC1C033F3A002C15EB /* Metal.framework */,
 			);
@@ -204,6 +216,7 @@
 			files = (
 				647EDAE71C033EF4002C15EB /* LaunchScreen.storyboard in Resources */,
 				647EDAE41C033EF4002C15EB /* Assets.xcassets in Resources */,
+				643D08421C071CB200DF367F /* sun.obj in Resources */,
 				647EDAE21C033EF4002C15EB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -222,9 +235,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				647EDB041C0353F6002C15EB /* SSRenderer.swift in Sources */,
-				647EDB001C033FD1002C15EB /* SSMetalView.swift in Sources */,
 				647EDADF1C033EF4002C15EB /* ViewController.swift in Sources */,
+				643D08441C07296500DF367F /* Types.swift in Sources */,
 				647EDADD1C033EF4002C15EB /* AppDelegate.swift in Sources */,
 				642D6CDB1C041E4D00C939C6 /* Shaders.metal in Sources */,
 			);

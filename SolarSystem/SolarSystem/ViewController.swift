@@ -9,19 +9,42 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    @IBOutlet var metalView: SSMetalView!
     
-    var renderer: SSRenderer! = nil
+    let device = MTLCreateSystemDefaultDevice()!
+    let metalLayer = CAMetalLayer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 //        print("viewDidLoad\n")
         // Do any additional setup after loading the view, typically from a nib.
-        self.renderer = SSRenderer()
-        self.metalView.delegate = self.renderer
+        metalLayer.frame = self.view.frame
+        metalLayer.device = device
+        metalLayer.pixelFormat = MTLPixelFormat.BGRA8Unorm
+        self.view.layer.addSublayer(metalLayer)
+        redraw()
+//        self.renderer = SSRenderer()
     }
 
+    
+    func redraw() {
+        if let drawable = metalLayer.nextDrawable() {
+            
+            let texture = drawable.texture
+            let renderPassDesc = MTLRenderPassDescriptor()
+            renderPassDesc.colorAttachments[0].texture = texture
+            renderPassDesc.colorAttachments[0].loadAction = MTLLoadAction.Clear
+            renderPassDesc.colorAttachments[0].storeAction = MTLStoreAction.Store
+            renderPassDesc.colorAttachments[0].clearColor = MTLClearColorMake(1.0, 0, 0, 1.0)
+            
+            let commandQueue = self.device.newCommandQueue()
+            let commandBuffer = commandQueue.commandBuffer()
+            let commandEncoder = commandBuffer.renderCommandEncoderWithDescriptor(renderPassDesc)
+            commandEncoder.endEncoding()
+            commandBuffer.presentDrawable(drawable)
+            commandBuffer.commit()
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
