@@ -11,6 +11,5 @@ import simd
 
 struct SSVertex {
     var position: vector_float4
-    var normal: vector_float4
-    var textureCoordinate: vector_float2
+    var color: vector_float4
 }
