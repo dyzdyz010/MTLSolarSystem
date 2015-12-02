@@ -9,12 +9,13 @@
 import UIKit
 
 class ViewController: UIViewController {
+    let renderer = SSRenderer()
     
-    let device = MTLCreateSystemDefaultDevice()!
-    let metalLayer = CAMetalLayer()
-    
+    @IBOutlet var _metalView: SSMetalView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        _metalView._delegate = renderer
     }
     
     override func didReceiveMemoryWarning() {
